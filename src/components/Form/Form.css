@@ -1,0 +1,22 @@
+.form {
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 10px 80px;
+    max-width: 70%;
+    background: #F7F7F7;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.form h2 {
+    font-family: 'Prata';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 43px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    color: #212121;
+}
