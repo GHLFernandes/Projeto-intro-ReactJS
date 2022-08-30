@@ -1,12 +1,13 @@
 /* src/componentes/Rodape/index.js */
 
 .footer {
-    background: #6278F7;
-    color: #FFF;
-    padding: 80px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    background: #6278f7;
+    color: #fff;
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0 auto;
 }
 
 .footer ul li {
