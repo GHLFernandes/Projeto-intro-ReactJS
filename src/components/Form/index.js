@@ -15,6 +15,10 @@ const Form = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         props.handleSubmit({nome, cargo, imagem, time});
+        setNome('');
+        setCargo('');
+        setImagem('');
+        setTime('');
     }
 
     return(

@@ -4,7 +4,7 @@ import Card from '../Card';
 const Team = (props) => {
     
     return(
-        <section className='time' style={{
+        (props.collaborators.length > 0) && <section className='time' style={{
             backgroundColor: props.secundaryColor
         }}>
             <h3 style={{
@@ -12,6 +12,7 @@ const Team = (props) => {
              }}>{props.nome}</h3>
             <div className='cards'>
                 {props.collaborators.map(collaborator => <Card 
+                                                            key={collaborator.nome}
                                                             user={props.user} 
                                                             nome={collaborator.nome} 
                                                             cargo={collaborator.cargo} 

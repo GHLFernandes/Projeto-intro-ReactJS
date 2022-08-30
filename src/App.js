@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Banner from './components/Banner';
+import Footer from './components/Footer';
 import Form from './components/Form';
 import Team from './components/Team';
 
 const banner = 'imagens/banner.png';
-const user = 'imagens/logo192.png';
 
 function App() {
 
@@ -49,7 +49,6 @@ function App() {
   const [ collaborators, setCollaborators ] = useState([]);
 
   const handleSubmit = (submit) => {
-    console.log(submit)
     setCollaborators([...collaborators, submit])
   }
 
@@ -62,10 +61,12 @@ function App() {
                               collaborators={collaborators.filter(collaborator => collaborator.time === team.nome)} 
                               key={team.nome} 
                               nome={team.nome} 
-                              user={user} 
                               primaryColor={team.primaryColor} 
-                              secundaryColor={team.secundaryColor}/> )}
+                              secundaryColor={team.secundaryColor}
+                              /> )
+                            }
         
+        <Footer />
     </div>
   );
 }
