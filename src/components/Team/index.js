@@ -2,7 +2,7 @@ import './Team.css';
 import Card from '../Card';
 
 const Team = (props) => {
-    
+
     return(
         (props.collaborators.length > 0) && <section className='time' style={{
             backgroundColor: props.secundaryColor

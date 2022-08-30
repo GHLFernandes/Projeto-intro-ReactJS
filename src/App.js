@@ -5,6 +5,7 @@ import Form from './components/Form';
 import Team from './components/Team';
 
 const banner = 'imagens/banner.png';
+const user = 'imagens/user.jpg';
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
         { teams.map(team => <Team 
                               collaborators={collaborators.filter(collaborator => collaborator.time === team.nome)} 
                               key={team.nome} 
+                              user={user}
                               nome={team.nome} 
                               primaryColor={team.primaryColor} 
                               secundaryColor={team.secundaryColor}

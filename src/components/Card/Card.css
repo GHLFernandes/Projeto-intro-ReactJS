@@ -15,6 +15,7 @@
     width: 55%;
     position: relative;
     bottom: -20px;
+    background-color: white;
 }
 
 .card .header {
