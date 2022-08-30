@@ -1,14 +1,22 @@
 import './InputSelect.css';
 
 const InputSelect = (props) => {
+
+    
+
     return(
         <div className="inputSelect">
             <label>{props.label}</label>
-            <select name="select" defaultValue={'DEFAULT'}  >
-                <option value="DEFAULT" disabled>--Selecione--</option>
-                <option value="valor1">Valor 1</option>
-                <option value="valor2">Valor 2</option>
-                <option value="valor3">Valor 3</option>
+            <select 
+                name="select" 
+                required={props.required} 
+                onChange={e => props.onChange(e.target.value)}
+                value={props.value}
+            >
+            <option value='' disabled key={0}>--Selecione--</option>
+                {
+                    props.itens.map(item => <option key={item}>{item}</option>)
+                }
             </select>
         </div>
                 );
