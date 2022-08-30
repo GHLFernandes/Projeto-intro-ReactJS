@@ -4,8 +4,6 @@ import InputSelect from '../InputSelect';
 import Button from '../Button';
 import './Form.css';
 
-const teams = ['Valor 1', 'Valor 2', 'Valor 3'];
-
 const Form = (props) => {
 
     const [ nome, setNome ] = useState('');
@@ -45,7 +43,7 @@ const Form = (props) => {
                     />
                     <InputSelect 
                         label="Time" 
-                        itens={teams}
+                        itens={props.team}
                         value={time}
                         onChange={value => setTime(value)}
                     />

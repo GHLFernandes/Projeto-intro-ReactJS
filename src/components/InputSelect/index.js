@@ -2,8 +2,6 @@ import './InputSelect.css';
 
 const InputSelect = (props) => {
 
-    
-
     return(
         <div className="inputSelect">
             <label>{props.label}</label>
