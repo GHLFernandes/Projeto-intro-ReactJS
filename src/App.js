@@ -3,6 +3,7 @@ import Banner from './components/Banner';
 import Footer from './components/Footer';
 import Form from './components/Form';
 import Team from './components/Team';
+import { GlobalStyle } from './components/GlobalStyle';
 
 const banner = 'imagens/banner.png';
 const user = 'imagens/user.jpg';
@@ -55,6 +56,7 @@ function App() {
 
   return (
     <div className="App">
+      <GlobalStyle />
         <Banner banner={banner}/>
         <Form handleSubmit={submit => handleSubmit(submit)} team={teams.map(team => team.nome)}/>
 

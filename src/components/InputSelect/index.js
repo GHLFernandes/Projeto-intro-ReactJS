@@ -1,9 +1,32 @@
-import './InputSelect.css';
+import styled from 'styled-components';
+
+const StyledInputSelect = styled.div`
+    margin: 24px 0;
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    select {
+        background-color: #fff;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, .06);
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+`;
 
 const InputSelect = (props) => {
 
     return(
-        <div className="inputSelect">
+        <StyledInputSelect>
             <label>{props.label}</label>
             <select 
                 name="select" 
@@ -16,7 +39,7 @@ const InputSelect = (props) => {
                     props.itens.map(item => <option key={item}>{item}</option>)
                 }
             </select>
-        </div>
+        </StyledInputSelect>
                 );
 }
 

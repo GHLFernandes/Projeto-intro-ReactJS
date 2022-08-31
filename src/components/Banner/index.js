@@ -1,11 +1,20 @@
 import React from "react";
-import './Banner.css';
+import styled from "styled-components";
+
+const StyledBanner = styled.header`
+    background-color: #6278F7;
+    text-align: center;
+`;
+
+const BannerImg = styled.img`
+    max-width: 100%;
+`;
 
 const Banner = (props) => {
     return(
-        <header className="banner"> 
-            <img src={props.banner} alt="Banner principal da página do Organo"/>
-        </header>
+        <StyledBanner> 
+            <BannerImg src={props.banner} alt="Banner principal da página do Organo"/>
+        </StyledBanner>
     )
 }
 

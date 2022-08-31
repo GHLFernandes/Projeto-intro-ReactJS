@@ -2,7 +2,30 @@ import React, { useState } from 'react';
 import InputText from '../InputText';
 import InputSelect from '../InputSelect';
 import Button from '../Button';
-import './Form.css';
+import styled from 'styled-components';
+
+const StyledForm = styled.section`
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 10px 80px;
+    max-width: 55%;
+    background: #F7F7F7;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+
+    h2 {
+        font-family: 'Prata';
+        font-style: normal;
+        font-weight: 400;
+        line-height: 43px;
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+        color: #212121;
+    }
+`;
 
 const Form = (props) => {
 
@@ -22,7 +45,7 @@ const Form = (props) => {
     }
 
     return(
-        <section className='form'>
+        <StyledForm>
             <h2>Preencha os dados para criar o card do colaborador.</h2>
                 <form onSubmit={handleSubmit}>
                     <InputText 
@@ -54,7 +77,7 @@ const Form = (props) => {
 
                     <Button type="submit">Criar card</Button>
                 </form>
-        </section>
+        </StyledForm>
 
     );
 }
